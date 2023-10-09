@@ -30,15 +30,15 @@ namespace API.Migrations
                 {
                     FolhaId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Valor = table.Column<float>(type: "REAL", nullable: true),
-                    Quantidade = table.Column<int>(type: "INTEGER", nullable: true),
-                    Mes = table.Column<int>(type: "INTEGER", nullable: true),
-                    Ano = table.Column<int>(type: "INTEGER", nullable: true),
-                    salarioBruto = table.Column<float>(type: "REAL", nullable: true),
-                    ImpostoIRRF = table.Column<float>(type: "REAL", nullable: true),
-                    ImpostoINSS = table.Column<float>(type: "REAL", nullable: true),
-                    ImpostoFGTS = table.Column<float>(type: "REAL", nullable: true),
-                    SalarioLiquido = table.Column<float>(type: "REAL", nullable: true),
+                    Valor = table.Column<double>(type: "REAL", nullable: false),
+                    Quantidade = table.Column<int>(type: "INTEGER", nullable: false),
+                    Mes = table.Column<int>(type: "INTEGER", nullable: false),
+                    Ano = table.Column<int>(type: "INTEGER", nullable: false),
+                    SalarioBruto = table.Column<double>(type: "REAL", nullable: true),
+                    ImpostoIRRF = table.Column<double>(type: "REAL", nullable: true),
+                    ImpostoINSS = table.Column<double>(type: "REAL", nullable: true),
+                    ImpostoFGTS = table.Column<double>(type: "REAL", nullable: true),
+                    SalarioLiquido = table.Column<double>(type: "REAL", nullable: true),
                     FuncionarioId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>

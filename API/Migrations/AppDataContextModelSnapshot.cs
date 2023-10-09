@@ -23,34 +23,34 @@ namespace API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("Ano")
+                    b.Property<int>("Ano")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("FuncionarioId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<float?>("ImpostoFGTS")
+                    b.Property<double?>("ImpostoFGTS")
                         .HasColumnType("REAL");
 
-                    b.Property<float?>("ImpostoINSS")
+                    b.Property<double?>("ImpostoINSS")
                         .HasColumnType("REAL");
 
-                    b.Property<float?>("ImpostoIRRF")
+                    b.Property<double?>("ImpostoIRRF")
                         .HasColumnType("REAL");
 
-                    b.Property<int?>("Mes")
+                    b.Property<int>("Mes")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("Quantidade")
+                    b.Property<int>("Quantidade")
                         .HasColumnType("INTEGER");
 
-                    b.Property<float?>("SalarioLiquido")
+                    b.Property<double?>("SalarioBruto")
                         .HasColumnType("REAL");
 
-                    b.Property<float?>("Valor")
+                    b.Property<double?>("SalarioLiquido")
                         .HasColumnType("REAL");
 
-                    b.Property<float?>("salarioBruto")
+                    b.Property<double>("Valor")
                         .HasColumnType("REAL");
 
                     b.HasKey("FolhaId");

@@ -59,6 +59,13 @@ public class FolhaController : ControllerBase
     {
         try
         {
+            Funcionario? funcionario = _ctx.Funcionarios.Find(folha.FuncionarioId);
+            if (funcionario == null)
+            {
+                return NotFound();
+            }
+            folha.Funcionario = funcionario;
+
             // Cálculo do Salário Bruto
             folha.SalarioBruto = folha.Quantidade * folha.Valor;
 
